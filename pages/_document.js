@@ -17,6 +17,7 @@ class MyDocument extends Document {
         />
         <link rel="icon" href="/static/images/psu_icon.png"></link>
         <link rel="stylesheet" href="/static/styles/fonts.css"></link>
+        <link href="/static/style/signin.css" rel="stylesheet" />
         <body>
           <Main />
           <NextScript />
