@@ -2,23 +2,18 @@ import React from "react";
 import "../signin/signin.css";
 const signin = () => {
   return (
-    <div className="background">
-      <div class="box">
-        <form autocomplete="off">
-          <img src="static/images/psu_icon.png"></img>
-          <p class="text-center">
-            <b>Sign In</b>
-          </p>
-          <div class="input-container">
-            <input type="text" placeholder="username" autocomplete="off" />
-          </div>
-          <div class="input-container">
-            <input type="password" placeholder="password" autocomplete="off" />
-          </div>
-          <button type="button" class="btn">
-            Sign in
-          </button>
-        </form>
+    <div className="bg">
+      <title>Sign in</title>
+      <div className="loginbox">
+        <img src="/static/images/user.png" className="avatar"></img>
+        <h1>PSU PASSPORT</h1>
+        <from>
+          <p>Username</p>
+          <input type="text" name="" placeholder="Enter Username"></input>
+          <p>Password</p>
+          <input type="password" name="" placeholder="Enter Password"></input>
+          <input type="submit" name="" value="Login"></input>
+        </from>
       </div>
     </div>
   );
