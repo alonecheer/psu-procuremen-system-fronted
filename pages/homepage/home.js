@@ -8,7 +8,7 @@ const home = () => {
       <title>Homepage</title>
       <Header />
       <div className="content-service">
-        <div className="container">
+        <div className="container-service">
           <div className="content-service-container">
             <h1>How It Works</h1>
             <div className="content-service-grid">
