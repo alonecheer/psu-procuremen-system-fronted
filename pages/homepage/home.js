@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../header/Header"
+import Header from "../../src/components/header/Header.js"
 import "../homepage/home.css";
 const home =() =>{
     return <div>
