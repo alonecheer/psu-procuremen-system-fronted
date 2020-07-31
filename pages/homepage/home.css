@@ -64,6 +64,7 @@ body {
     grid-gap: 20px;
   }
   .content-service-grid-item {
+    padding: 10px 10px;
     border: 1px solid #000;
   }
 }

@@ -100,6 +100,97 @@ a {
   text-decoration: none;
 }
 
+/* Hamburger */
+.content-hamburger li {
+  list-style-type: none;
+}
+.content-hamburger label .menu {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 50% 50% 50% 50%;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.content-hamburger label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  display: block;
+  transform-origin: center;
+  transition: 0.5s ease-in-out;
+}
+.content-hamburger label .hamburger:after,
+.content-hamburger label .hamburger::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.content-hamburger label .hamburger:before {
+  top: -10px;
+}
+.content-hamburger label .hamburger:after {
+  bottom: -10px;
+}
+.content-hamburger label input {
+  display: none;
+}
+.content-hamburger label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #fff, 0 0 0 100vh #fff;
+  border-radius: 0;
+}
+.content-hamburger label input:checked + .menu .hamburger {
+  transition: rotate(45deg);
+}
+.content-hamburger label input:checked + .menu .hamburger:after {
+  transition: rotate(90deg);
+  bottom: 0;
+}
+.content-hamburger label input:checked + .menu .hamburger:before {
+  transition: rotate(90deg);
+  top: 0;
+}
+.content-hamburger label input:checked + ul {
+  opacity: 1;
+}
+.content-hamburger label ul {
+  z-index: 200;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.25s 0s ease-in-out;
+}
+.content-hamburger label a {
+  margin-bottom: 1em;
+  font-size: 18px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px 36px;
+  transition: 0.5s ease-in-out;
+}
+.content-hamburger label a:hover {
+  background-color: teal;
+  color: black;
+  letter-spacing: 3px;
+}
 @media screen and (max-width: 280px),
   (max-width: 375px),
   (max-width: 411px),
@@ -150,5 +241,8 @@ a {
   ul.menu li {
     margin-top: 15px;
     width: 100%;
+  }
+  .fr {
+    display: none;
   }
 }

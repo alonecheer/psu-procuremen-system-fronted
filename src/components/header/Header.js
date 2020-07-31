@@ -14,6 +14,30 @@ const Header = () => {
               </div>
             </a>
           </div>
+          {/*-------------------------- Hamburger --------------------------*/}
+          <div className="content-hamburger">
+            <label>
+              <input type="checkbox"></input>
+              <span className="menu">
+                <span className="hamburger"></span>
+              </span>
+              <ul>
+                <li>
+                  <a href="#">พัสดุแบบปกติ 001</a>
+                </li>
+                <li>
+                  <a href="#">พัสดุแบบเร่งด่วน 002</a>
+                </li>
+                <li>
+                  <a href="#">จัดการข้อมูลส่วนตัว</a>
+                </li>
+                <li>
+                  <a href="#">ออกจากระบบ</a>
+                </li>
+              </ul>
+            </label>
+          </div>
+
           {/*-------------------------- Menu --------------------------*/}
           <div className="fr">
             <ul className="menu">
