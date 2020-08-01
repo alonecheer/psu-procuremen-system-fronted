@@ -9,6 +9,7 @@ import Form001_1StyleWrapper from "./form001_1.style";
 const form001_1 = () => {
   return (
     <Form001_1StyleWrapper>
+      <title>Form001_1</title>
       <Layout>
         <SiderComponent />
         <Layout>
@@ -179,6 +180,156 @@ const form001_1 = () => {
                       <input type="text" placeholder=""></input>
                     </div>
                   </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        คณะกรรมการตรวจรับพัสดุ (ประธานกรรมการ)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        คณะกรรมการตรวจรับพัสดุ (คณะกรรมการ)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        คณะกรรมการตรวจรับพัสดุ (คณะกรรมการ)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Title Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label className="title-text">4.แหล่งเงิน</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="hidden"></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">เงินอุดหนุนจากรัฐบาล ปี</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">เงินรายได้ ปี</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">เงินรายได้สะสม ปี</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">ทิศทาง</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">นโยบาย</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">ผลงาน</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">งาน</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">หมวดรายจ่าย</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">หมวดย่อย</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">ชื่อรายการ</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        เงินอื่นๆโปรดระบุ (ตามที่แนบมาพร้อมนี้)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input
+                      style={{ marginTop: "20px" }}
+                      type="submit"
+                      value="Submit"
+                    ></input>
+                  </div>
                   {/* ----------------------------------- Option ----------------------------- */}
                   {/* <div class="row">
                     <div class="col-25">
@@ -206,9 +357,7 @@ const form001_1 = () => {
                       ></textarea>
                     </div>
                   </div>
-                  <div class="row">
-                    <input type="submit" value="Submit"></input>
-                  </div> */}
+                   */}
                   {/* ----------------------------------- 1 ----------------------------- */}
                 </form>
               </div>

@@ -34,7 +34,7 @@ const SiderComponent = () => {
         <Menu.Item
           key="1"
           icon={<HomeOutlined />}
-          style={{ marginTop: "50px" }}
+          style={{ marginTop: "64px" }}
         >
           <a
             style={{
