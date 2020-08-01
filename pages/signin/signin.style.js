@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
+import styled from "styled-components";
+
+const SigninStyleWrapper = styled.div`
+  @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
 
 *,
 html,
@@ -92,3 +95,6 @@ input[type="password"] {
   font-size: 16px;
   margin-bottom: 50px;
 }
+
+`;
+export default SigninStyleWrapper;

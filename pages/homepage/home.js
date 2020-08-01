@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "../../src/components/header/Header.js";
 import Footer from "../../src/components/footer/Footer.js";
-import "../homepage/home.css";
+import HomeStyleWrapper from "./home.style";
 const home = () => {
   return (
-    <div>
+    <HomeStyleWrapper>
       <title>Homepage</title>
       <Header />
       <div className="content-service">
@@ -46,7 +46,7 @@ const home = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </HomeStyleWrapper>
   );
 };
 export default home;

@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
+import styled from "styled-components";
+
+const HomeStyleWrapper = styled.div`
+  @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
 
 *,
 html,
@@ -68,3 +71,6 @@ body {
     border: 1px solid #000;
   }
 }
+
+`;
+export default HomeStyleWrapper;

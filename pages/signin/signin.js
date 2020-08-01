@@ -1,7 +1,8 @@
 import React from "react";
-import "../signin/signin.css";
+import SigninStyleWrapper from "./signin.style";
 const signin = () => {
   return (
+    <SigninStyleWrapper>
     <div className="bg">
       <title>Sign in</title>
       <div className="loginbox">
@@ -16,6 +17,7 @@ const signin = () => {
         </from>
       </div>
     </div>
+    </SigninStyleWrapper>
   );
 };
 export default signin;
