@@ -4,7 +4,8 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <HeaderStyleWrapper>
-    <header className="header">
+      <div className="container">
+        <header className="header">
       <a href="/" className="logo">
         PSU procuremen system
       </a>
@@ -30,6 +31,8 @@ const Header = () => {
       </ul>
       <div>sdfdsf</div>
     </header>
+      </div>
+    
     </HeaderStyleWrapper>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
-import "./footer.css";
+import FooterStyleWrapper from "./footer.style.js";
 const Footer = () => {
   return (
-    <div>
+    <FooterStyleWrapper>
       <title>Footer</title>
       <footer>
         <div className="copyright">
@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </FooterStyleWrapper>
   );
 };
 export default Footer;
