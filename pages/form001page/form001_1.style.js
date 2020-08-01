@@ -12,7 +12,7 @@ const Form001_1StyleWrapper = styled.div`
   }
 
   input[type="text"],
-  select,
+  input[type="number"] ,select,
   textarea {
     width: 100%;
     padding: 12px;

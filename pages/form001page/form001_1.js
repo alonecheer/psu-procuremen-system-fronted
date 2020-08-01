@@ -1,12 +1,27 @@
 import React from "react";
-
-import { Layout } from "antd";
+import { useForm } from "react-hook-form";
+import { Layout, BackTop } from "antd";
 const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import Form001_1StyleWrapper from "./form001_1.style";
+const style = {
+  height: 40,
+  width: 40,
+  lineHeight: "40px",
+  borderRadius: 4,
+  backgroundColor: "#1088e9",
+  color: "#fff",
+  textAlign: "center",
+  fontSize: 14,
+};
 const form001_1 = () => {
+  const { register, handleSubmit, errors } = useForm(); // initialise the hook
+  const onSubmit = (data) => {
+    console.log("data", data);
+  };
+
   return (
     <Form001_1StyleWrapper>
       <title>Form001_1</title>
@@ -25,7 +40,7 @@ const form001_1 = () => {
                 กรณีวงเงินครั้งหนึ่งไม่เกิน 5 แสนบาท ที่มิใช่ก่อสร้าง
               </p>
               <div className="container">
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   {/* ----------------------------------- Title Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
@@ -41,7 +56,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">เอกสารของ</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder="60xxxxxxx"></input>
+                      <input
+                        type="text"
+                        name="sid"
+                        ref={register}
+                        placeholder="60xxxxxxx"
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -50,7 +70,11 @@ const form001_1 = () => {
                       <label htmlFor="lname">เอกสารที่ มอ.696/</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_location"
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -59,7 +83,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">ลงวันที่</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_date"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -70,7 +99,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_purpose"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -79,7 +113,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">ชื่อโครงการ (ถ้ามี)</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_projectname"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -88,7 +127,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">วันที่ต้องใช้พัสดุ</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_require"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Title Text ----------------------------- */}
@@ -111,7 +155,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="number"
+                        name="o_specific"
+                        defaultValue="0"
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -123,7 +172,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="number"
+                        name="o_appointment"
+                        defaultValue="0"
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -135,7 +189,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="number"
+                        name="o_results"
+                        defaultValue="0"
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Title Text ----------------------------- */}
@@ -155,7 +214,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_committee1"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -166,7 +230,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_committee2"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -177,7 +246,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_committee3"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -188,7 +262,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_committee4"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -199,7 +278,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_committee5"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -210,7 +294,12 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_committee6"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Title Text ----------------------------- */}
@@ -228,7 +317,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">เงินอุดหนุนจากรัฐบาล ปี</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_gvm_sub"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -237,7 +331,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">เงินรายได้ ปี</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_income"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -246,7 +345,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">เงินรายได้สะสม ปี</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_aml_income"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -255,7 +359,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">ทิศทาง</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_direction"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -264,7 +373,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">นโยบาย</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_policy"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -273,7 +387,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">ผลงาน</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_works"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -282,7 +401,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">งาน</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_task"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -291,7 +415,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">หมวดรายจ่าย</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_expense_cg"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -300,7 +429,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">หมวดย่อย</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_sub_cg"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -309,7 +443,12 @@ const form001_1 = () => {
                       <label htmlFor="lname">ชื่อรายการ</label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_list_n"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -320,10 +459,15 @@ const form001_1 = () => {
                       </label>
                     </div>
                     <div className="col-75">
-                      <input type="text" placeholder=""></input>
+                      <input
+                        type="text"
+                        name="o_other_m"
+                        placeholder=""
+                        ref={register}
+                      ></input>
                     </div>
                   </div>
-                  <div class="row">
+                  <div className="row">
                     <input
                       style={{ marginTop: "20px" }}
                       type="submit"
@@ -331,11 +475,11 @@ const form001_1 = () => {
                     ></input>
                   </div>
                   {/* ----------------------------------- Option ----------------------------- */}
-                  {/* <div class="row">
-                    <div class="col-25">
+                  {/* <div className="row">
+                    <div className="col-25">
                       <label htmlFor="country">Country</label>
                     </div>
-                    <div class="col-75">
+                    <div className="col-75">
                       <select id="country" name="country">
                         <option value="australia">Australia</option>
                         <option value="canada">Canada</option>
@@ -344,11 +488,11 @@ const form001_1 = () => {
                     </div>
                   </div> */}
                   {/* ----------------------------------- Text Area ----------------------------- */}
-                  {/* <div class="row">
-                    <div class="col-25">
+                  {/* <div className="row">
+                    <div className="col-25">
                       <label htmlFor="subject">Subject</label>
                     </div>
-                    <div class="col-75">
+                    <div className="col-75">
                       <textarea
                         id="subject"
                         name="subject"
@@ -366,6 +510,9 @@ const form001_1 = () => {
           <FooterComponent />
         </Layout>
       </Layout>
+      <BackTop>
+        <div style={style}>UP</div>
+      </BackTop>
     </Form001_1StyleWrapper>
   );
 };

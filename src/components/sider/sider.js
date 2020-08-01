@@ -11,6 +11,9 @@ import {
 } from "@ant-design/icons";
 const { Sider } = Layout;
 const SiderComponent = () => {
+  const goPage_form002 = (e) => {
+    Router.push("/#002");
+  };
   const goPage_form001 = (e) => {
     Router.push("/form001page/form001_1");
   };
@@ -30,50 +33,39 @@ const SiderComponent = () => {
       }}
     >
       <div className="logo" />
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-        <Menu.Item
-          key="1"
-          icon={<HomeOutlined />}
-          style={{ marginTop: "64px" }}
-        >
-          <a
-            style={{
-              color: "rgba(255, 255, 255, 0.65)",
-              backgroundColor: "transparent",
-              textDecoration: "none",
-            }}
-            className="text-menu"
-            onClick={goPage_home}
+      <SiderStyleWrapper>
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
+          <Menu.Item
+            key="/homepage/home"
+            icon={<HomeOutlined />}
+            style={{ marginTop: "64px" }}
           >
-            หน้าแรก
-          </a>
-        </Menu.Item>
-        <Menu.Item key="2" icon={<PlusSquareOutlined />}>
-          <a
-            style={{
-              color: "rgba(255, 255, 255, 0.65)",
-              backgroundColor: "transparent",
-              textDecoration: "none",
-            }}
-            className="text-menu"
-            onClick={goPage_form001}
-          >
-            คำสั่งซื้อพัสดุแบบปกติ 001
-          </a>
-        </Menu.Item>
-        <Menu.Item key="3" icon={<PlusSquareOutlined />}>
-          เพิ่มคำสั่งซื้อแบบเร่งด่วน 002
-        </Menu.Item>
-        <Menu.Item key="4" icon={<EditOutlined />}>
-          จัดการข้อมูลส่วนตัว
-        </Menu.Item>
-        <Menu.Item key="5" icon={<OrderedListOutlined />}>
-          ประวัติทำรายการ
-        </Menu.Item>
-        <Menu.Item key="6" icon={<LoginOutlined />}>
-          ออกจากระบบ
-        </Menu.Item>
-      </Menu>
+            <a className="text-a" onClick={goPage_home}>
+              หน้าแรก
+            </a>
+          </Menu.Item>
+
+          <Menu.Item key="2" icon={<PlusSquareOutlined />}>
+            <a className="text-a" onClick={goPage_form001}>
+              คำสั่งซื้อพัสดุแบบปกติ 001
+            </a>
+          </Menu.Item>
+          <Menu.Item key="3" icon={<PlusSquareOutlined />}>
+            <a className="text-a" onClick={goPage_form002}>
+              คำสั่งซื้อพัสดุแบบเร่งด่วน 002
+            </a>
+          </Menu.Item>
+          <Menu.Item key="4" icon={<EditOutlined />}>
+            จัดการข้อมูลส่วนตัว
+          </Menu.Item>
+          <Menu.Item key="5" icon={<OrderedListOutlined />}>
+            ประวัติทำรายการ
+          </Menu.Item>
+          <Menu.Item key="6" icon={<LoginOutlined />}>
+            ออกจากระบบ
+          </Menu.Item>
+        </Menu>
+      </SiderStyleWrapper>
     </Sider>
   );
 };
