@@ -57,7 +57,7 @@ body {
   (max-width: 375px),
   (max-width: 411px),
   (max-width: 414px),
-  (max-width: 450px), {
+  (max-width: 450px){
   .content-service-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

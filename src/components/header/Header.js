@@ -14,29 +14,6 @@ const Header = () => {
               </div>
             </a>
           </div>
-          {/*-------------------------- Hamburger --------------------------*/}
-          <div className="content-hamburger">
-            <label>
-              <input type="checkbox"></input>
-              <span className="menu">
-                <span className="hamburger"></span>
-              </span>
-              <ul>
-                <li>
-                  <a href="#">พัสดุแบบปกติ 001</a>
-                </li>
-                <li>
-                  <a href="#">พัสดุแบบเร่งด่วน 002</a>
-                </li>
-                <li>
-                  <a href="#">จัดการข้อมูลส่วนตัว</a>
-                </li>
-                <li>
-                  <a href="#">ออกจากระบบ</a>
-                </li>
-              </ul>
-            </label>
-          </div>
 
           {/*-------------------------- Menu --------------------------*/}
           <div className="fr">
@@ -46,18 +23,47 @@ const Header = () => {
                   <a href="#">เพิ่มคำสั่งซื้อ</a>
                 </li>
                 <div className="dropdown-content">
-                  <a href="#">พัสดุแบบปกติ 001</a>
+                  <a href="/form001page/form001_1">พัสดุแบบปกติ 001</a>
                   <a href="#">พัสดุแบบเร่งด่วน 002</a>
                 </div>
               </div>
-              <li>
-                <a href="#">จัดการข้อมูลส่วนตัว</a>
-              </li>
+              <div className="dropdown">
+                <li>
+                  <a href="#">เครื่องมือ</a>
+                </li>
+                <div className="dropdown-content">
+                  <a href="#">ประวัติการทำรายการ</a>
+                  <a href="#">ข้อมูลส่วนตัว</a>
+                </div>
+              </div>
+
               <li>
                 <a href="#">ออกจากระบบ</a>
               </li>
             </ul>
           </div>
+        </div>
+        {/*-------------------------- Hamburger --------------------------*/}
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu2">
+            <a href="#">
+              <li>Home</li>
+            </a>
+            <a href="#">
+              <li>About</li>
+            </a>
+            <a href="#">
+              <li>Info</li>
+            </a>
+            <a href="#">
+              <li>Contact</li>
+            </a>
+          </ul>
         </div>
       </div>
     </header>
