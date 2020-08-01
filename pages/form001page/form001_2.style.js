@@ -30,8 +30,17 @@ Generic Styling, for Desktops/Laptops
   th {
     padding: 6px;
     border: 1px solid #ccc;
-    text-align: left;
+    text-align: center;
   }
+  input {
+    outline: none;
+    margin: 0;
+    width: 80%;
+    border: 1px solid #ddd;
+    background: white;
+    padding: 7px;
+  }
+
   /* 
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
@@ -39,6 +48,18 @@ and also iPads specifically.
 */
   @media only screen and (max-width: 760px),
     (min-device-width: 768px) and (max-device-width: 1024px) {
+    td {
+      text-align: center;
+    }
+    td:before {
+      text-align: left;
+    }
+
+    input {
+      margin: 0;
+      width: 80%;
+      text-align: center;
+    }
     /* Force table to not be like tables anymore */
     table,
     thead,
@@ -83,34 +104,19 @@ and also iPads specifically.
 	Label the data
 	*/
     td:nth-of-type(1):before {
-      content: "First Name";
+      content: "ลำดับ";
     }
     td:nth-of-type(2):before {
-      content: "Last Name";
+      content: "รายการ";
     }
     td:nth-of-type(3):before {
-      content: "Job Title";
+      content: "จำนวน";
     }
     td:nth-of-type(4):before {
-      content: "Favorite Color";
+      content: "	หน่วย";
     }
     td:nth-of-type(5):before {
-      content: "Wars of Trek?";
-    }
-    td:nth-of-type(6):before {
-      content: "Secret Alias";
-    }
-    td:nth-of-type(7):before {
-      content: "Date of Birth";
-    }
-    td:nth-of-type(8):before {
-      content: "Dream Vacation City";
-    }
-    td:nth-of-type(9):before {
-      content: "GPA";
-    }
-    td:nth-of-type(10):before {
-      content: "Arbitrary Data";
+      content: "ราคา/หน่วย";
     }
   }
 `;
