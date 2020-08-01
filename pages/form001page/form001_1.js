@@ -1,68 +1,220 @@
 import React from "react";
+
+import { Layout } from "antd";
+const { Content } = Layout;
+import SiderComponent from "../../src/components/sider/sider.js";
+import HeaderComponent from "../../src/components/header/header.js";
+import FooterComponent from "../../src/components/footer/footer.js";
 import Form001_1StyleWrapper from "./form001_1.style";
-import { Layout, Menu } from "antd";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-const { Header, Content, Footer, Sider } = Layout;
 const form001_1 = () => {
   return (
     <Form001_1StyleWrapper>
       <Layout>
-        <Sider
-          breakpoint="lg"
-          collapsedWidth="0"
-          width="300"
-          onBreakpoint={(broken) => {
-            console.log(broken);
-          }}
-          onCollapse={(collapsed, type) => {
-            console.log(collapsed, type);
-          }}
-        >
-          <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={["0"]}>
-            <Menu.Item
-              key="1"
-              icon={<UserOutlined />}
-              style={{ marginTop: "50px" }}
-            >
-              เพิ่มคำสั่งซื้อแบบปกติ 001
-            </Menu.Item>
-            <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-              เพิ่มคำสั่งซื้อแบบเร่งด่วน 002
-            </Menu.Item>
-            <Menu.Item key="3" icon={<UploadOutlined />}>
-              จัดการข้อมูลส่วนตัว
-            </Menu.Item>
-            <Menu.Item key="4" icon={<UserOutlined />}>
-              ประวัติทำรายการ
-            </Menu.Item>
-            <Menu.Item key="5" icon={<UserOutlined />}>
-              ออกจากระบบ
-            </Menu.Item>
-          </Menu>
-        </Sider>
+        <SiderComponent />
         <Layout>
-          <Header
-            className="site-layout-sub-header-background"
-            style={{ padding: 0 }}
-          >
-            <p> PSU procuremen system</p>
-          </Header>
+          <HeaderComponent />
           <Content style={{ margin: "24px 16px 0" }}>
             <div
               className="site-layout-background"
               style={{ padding: 24, minHeight: "100vh" }}
             >
-              content
+              <h2>เพิ่มคำสั่งซื้อแบบปกติ 001</h2>
+              <p>
+                แบบขอจัดหาพัสดุของสำนักงานอธิการบดีวิทยาเขตภูเก็ต
+                กรณีวงเงินครั้งหนึ่งไม่เกิน 5 แสนบาท ที่มิใช่ก่อสร้าง
+              </p>
+              <div className="container">
+                <form>
+                  {/* ----------------------------------- Title Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label className="title-text">1.รายละเอียด</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="hidden"></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">เอกสารของ</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder="60xxxxxxx"></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">เอกสารที่ มอ.696/</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">ลงวันที่</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        ด้วยมหาวิทยาลัยการคอมพิวเตอร์มีความประสงค์ที่จะใช้พัสดุด้านล่างนี้เพื่อ
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">ชื่อโครงการ (ถ้ามี)</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">วันที่ต้องใช้พัสดุ</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Title Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label className="title-text">
+                        2.รายละเอียดคุณลักษณะเฉพาะ/ขอบเขตงาน
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="hidden"></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        รายละเอียดคุณลักษณะเฉพาะ/ขอบเขตงาน
+                        (ประทับตรามหาวิทยาลัยพร้อมผู้มีอำนาจลงนาม) (จำนวนแผ่น)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        บันทึกการแต่งตั้งคณะกรรมการกำหนดคุณลักษณะเฉพาะ/ขอบเขตงานและราคากลาง
+                        (จำนวนแผ่น)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        บันทึกรายงานผลการจัดทำคุณลักษณะเฉพาะ/ขอบเขตงานและราคากลาง
+                        (จำนวนแผ่น)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Title Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label className="title-text">3.คณะกรรมการ</label>
+                    </div>
+                    <div className="col-75">
+                      <input type="hidden"></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        คณะกรรมการพิจารณาผล (ประธานกรรมการ)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        คณะกรรมการพิจารณาผล (คณะกรรมการ)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">
+                        คณะกรรมการพิจารณาผล (คณะกรรมการ)
+                      </label>
+                    </div>
+                    <div className="col-75">
+                      <input type="text" placeholder=""></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Option ----------------------------- */}
+                  {/* <div class="row">
+                    <div class="col-25">
+                      <label htmlFor="country">Country</label>
+                    </div>
+                    <div class="col-75">
+                      <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                      </select>
+                    </div>
+                  </div> */}
+                  {/* ----------------------------------- Text Area ----------------------------- */}
+                  {/* <div class="row">
+                    <div class="col-25">
+                      <label htmlFor="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                      <textarea
+                        id="subject"
+                        name="subject"
+                        placeholder="Write something.."
+                        style={{ height: "200px" }}
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="submit" value="Submit"></input>
+                  </div> */}
+                  {/* ----------------------------------- 1 ----------------------------- */}
+                </form>
+              </div>
             </div>
           </Content>
-          <Footer style={{ textAlign: "center" }}>
-            Ant Design ©2018 Created by Ant UED
-          </Footer>
+          <FooterComponent />
         </Layout>
       </Layout>
     </Form001_1StyleWrapper>

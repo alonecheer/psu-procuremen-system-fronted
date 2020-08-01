@@ -1,11 +1,6 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-const { Header, Content, Footer } = Layout;
+const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
@@ -21,9 +16,7 @@ const home = () => {
             <div
               className="site-layout-background"
               style={{ padding: 24, minHeight: "100vh" }}
-            >
-              content
-            </div>
+            ></div>
           </Content>
           <FooterComponent />
         </Layout>

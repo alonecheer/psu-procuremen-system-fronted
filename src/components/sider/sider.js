@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "next/router";
 import SiderStyleWrapper from "./sider.style.js";
 import { Layout, Menu } from "antd";
 import {
@@ -10,6 +11,12 @@ import {
 } from "@ant-design/icons";
 const { Sider } = Layout;
 const SiderComponent = () => {
+  const goPage_form001 = (e) => {
+    Router.push("/form001page/form001_1");
+  };
+  const goPage_home = (e) => {
+    Router.push("/homepage/home");
+  };
   return (
     <Sider
       breakpoint="lg"
@@ -23,16 +30,36 @@ const SiderComponent = () => {
       }}
     >
       <div className="logo" />
-      <Menu theme="dark" mode="inline" defaultSelectedKeys={["0"]}>
+      <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
         <Menu.Item
           key="1"
           icon={<HomeOutlined />}
           style={{ marginTop: "50px" }}
         >
-          หน้าแรก
+          <a
+            style={{
+              color: "rgba(255, 255, 255, 0.65)",
+              backgroundColor: "transparent",
+              textDecoration: "none",
+            }}
+            className="text-menu"
+            onClick={goPage_home}
+          >
+            หน้าแรก
+          </a>
         </Menu.Item>
         <Menu.Item key="2" icon={<PlusSquareOutlined />}>
-          เพิ่มคำสั่งซื้อแบบปกติ 001
+          <a
+            style={{
+              color: "rgba(255, 255, 255, 0.65)",
+              backgroundColor: "transparent",
+              textDecoration: "none",
+            }}
+            className="text-menu"
+            onClick={goPage_form001}
+          >
+            คำสั่งซื้อพัสดุแบบปกติ 001
+          </a>
         </Menu.Item>
         <Menu.Item key="3" icon={<PlusSquareOutlined />}>
           เพิ่มคำสั่งซื้อแบบเร่งด่วน 002
