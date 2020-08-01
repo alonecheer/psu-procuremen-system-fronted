@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Layout, BackTop } from "antd";
+import { Layout, BackTop, notification, Button } from "antd";
 const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
@@ -20,8 +20,38 @@ const form001_1 = () => {
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
   const onSubmit = (data) => {
     console.log("data", data);
+    let error = 0;
+    for (const [key, value] of Object.entries(data)) {
+      if (value != "") {
+        console.log(`Have value ${key}: ${value}`);
+      } else {
+        error = error + 1;
+        console.log(`Don't have value ${key}: ${value}`);
+      }
+    }
+    console.log(`${error}`);
+    if (error > 0) {
+      openNotificationWithIcon("warning");
+    } else {
+      openNotificationWithIcon("success");
+    }
   };
-
+  const openNotificationWithIcon = (type) => {
+    switch (type) {
+      case "warning":
+        notification[type]({
+          message: "บันทึกรายการไม่สำเร็จ",
+          description: "โปรดกรอกข้อมูลให้ครบถ้วน",
+        });
+        break;
+      case "success":
+        notification[type]({
+          message: "บันทึกรายการสำเร็จ",
+          description: "",
+        });
+        break;
+    }
+  };
   return (
     <Form001_1StyleWrapper>
       <title>Form001_1</title>
