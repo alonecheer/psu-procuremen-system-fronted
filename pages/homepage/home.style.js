@@ -1,76 +1,16 @@
 import styled from "styled-components";
 
 const HomeStyleWrapper = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
-
-*,
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Noto Sans", sans-serif;
-}
-.container-service {
-  max-width: 960px;
-  margin: 0 auto;
-}
-.content-service-container {
-  height: 100%;
-  margin: 20% 0px;
-  /* background-color: rgb(247, 216, 26); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  padding: 40px 30px 70px 30px;
-  -webkit-box-shadow: 2px -2px 32px -9px rgba(0, 0, 0, 0.31);
-  -moz-box-shadow: 2px -2px 32px -9px rgba(0, 0, 0, 0.31);
-  box-shadow: 2px -2px 32px -9px rgba(0, 0, 0, 0.31);
-}
-.content-service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-.content-service-grid-item {
-  text-align: center;
-}
-.content-service-grid-item img {
-  margin-bottom: 30px;
-}
-
-.content-service-container h1 {
-  margin-bottom: 90px;
-}
-
-.content-service-container h2 {
-  font-size: 15px;
-  margin-bottom: 30px;
-  color: rgb(64, 64, 64);
-}
-
-.content-service-container p {
-  text-align: center;
-  font-size: 15px;
-  color: rgb(141, 141, 141);
-}
-
-@media screen and (max-width: 280px),
-  (max-width: 375px),
-  (max-width: 411px),
-  (max-width: 414px),
-  (max-width: 450px){
-  .content-service-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+  #components-layout-demo-responsive .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
   }
-  .content-service-grid-item {
-    padding: 10px 10px;
-    border: 1px solid #000;
+
+
+  .site-layout-background {
+    background: #fff;
   }
-}
 
 `;
 export default HomeStyleWrapper;
