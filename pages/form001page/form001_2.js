@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "next/router";
 import { useForm } from "react-hook-form";
 import { Layout, BackTop, notification, Button, Table } from "antd";
 const { Content } = Layout;
@@ -50,7 +51,7 @@ const form001_2 = () => {
           message: "บันทึกรายการสำเร็จ",
           description: "",
         });
-        Router.push("/form001page/form001_2");
+        Router.push("/form001page/form001_3");
         break;
     }
   };
