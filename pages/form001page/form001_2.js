@@ -204,6 +204,11 @@ const form001_2 = () => {
                     </tr>
                   </tbody>
                 </table>
+                <input
+                  style={{ marginTop: "20px" }}
+                  type="submit"
+                  value="Submit"
+                ></input>
               </form>
             </div>
           </Content>

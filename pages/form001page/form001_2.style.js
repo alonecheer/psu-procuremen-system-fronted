@@ -40,7 +40,28 @@ Generic Styling, for Desktops/Laptops
     background: white;
     padding: 7px;
   }
+  /* Button */
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    width: 25%;
+  }
 
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  @media screen and (max-width: 600px) {
+    input[type="submit"] {
+      float: none;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
   /* 
 Max width before this PARTICULAR table gets nasty
 This query will take effect for any screen smaller than 760px
@@ -48,6 +69,13 @@ and also iPads specifically.
 */
   @media only screen and (max-width: 760px),
     (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Input Submit */
+    input[type="submit"] {
+      float: none;
+      width: 100%;
+      margin-top: 0;
+    }
+    /* Table */
     td {
       text-align: center;
     }
