@@ -11,5 +11,14 @@ const HeaderStyleWrapper = styled.div`
     font-weight: bold;
     text-transform: uppercase;
   }
+  @media only screen and (max-width: 417px) {
+    .site-layout-sub-header-background p {
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
 `;
 export default HeaderStyleWrapper;
