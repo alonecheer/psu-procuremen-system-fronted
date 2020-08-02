@@ -50,7 +50,7 @@ const example = () => {
           message: "บันทึกรายการสำเร็จ",
           description: "",
         });
-        Router.push("/form001page/form001_2");
+        Router.push("/homepage/home");
         break;
     }
   };
@@ -86,7 +86,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx1"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -100,7 +100,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx2"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -114,7 +114,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx3"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -128,7 +128,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx4"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -142,7 +142,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx5"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -156,7 +156,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx5"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -170,7 +170,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx7"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -197,7 +197,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx8"
                         ref={register}
                         placeholder="(รายการ)"
                       ></input>
@@ -211,7 +211,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx9"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -220,7 +220,7 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input type="checkbox" id="" name="" value="" />
+                      <input type="checkbox" name="checkbox1" />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">
@@ -238,7 +238,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx10"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -247,7 +247,7 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input type="checkbox" id="" name="" value="" />
+                      <input type="checkbox" name="checkbox2" />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">
@@ -266,7 +266,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx11"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -289,7 +289,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx11"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -303,7 +303,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx13"
                         ref={register}
                         placeholder="(บาท)"
                       ></input>
@@ -317,7 +317,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx14"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -331,7 +331,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx15"
                         ref={register}
                         placeholder="(บาท)"
                       ></input>
@@ -345,7 +345,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx16"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -359,7 +359,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx17"
                         ref={register}
                         placeholder="(บาท)"
                       ></input>
@@ -373,7 +373,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx18"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -387,7 +387,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx19"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -401,7 +401,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx20"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -415,7 +415,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx"
+                        name="xxxx21"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -427,12 +427,113 @@ const example = () => {
                       <label className="title-text">กรรมการตรวจรับพัสสดุ</label>
                     </div>
                     <div className="col-75">
+                      <input type="hidden"></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25"></div>
+                    <div className="col-75">
                       <label htmlFor="lname">
                         กรณีวงเงินไม่เกิน 1 แสนบาท
                         จะแต่งตั้งบุคคลใดบุคคลหนึ่งเป็นผู้ตรวจรับพัสดุก็ได้
                         แต่ถ้าเกิน 1 แสนบาท
                         ต้องแต่งตั้งคณะกรรมการตรวจรับพัสดุอย่างน้อย 3 คน
                       </label>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">1 )</label>
+                    </div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        name="xxxx22"
+                        ref={register}
+                        placeholder="(ประธานกรรมการ/ผู้ตรวจรับพัสดุ)"
+                      ></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">2 )</label>
+                    </div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        name="xxxx23"
+                        ref={register}
+                        placeholder="(กรรมการ)"
+                      ></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">3 )</label>
+                    </div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        name="xxxx24"
+                        ref={register}
+                        placeholder="(กรรมการ)"
+                      ></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25"></div>
+                    <div className="col-75">
+                      <label htmlFor="lname">
+                        จึงเรียนมาเพื่อโปรดพิจารณาอนุมัติการดำเนินการจัดซื้อจัดจ้าง
+                        ตามรายละเอียดดังกล่าวข้างต้น
+                      </label>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">(ลงชื่อ)</label>
+                    </div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        name="xxxx25"
+                        ref={register}
+                        placeholder=""
+                      ></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">ผู้ขอ</label>
+                    </div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        name="xxxx26"
+                        ref={register}
+                        placeholder=""
+                      ></input>
+                    </div>
+                  </div>
+                  {/* ----------------------------------- Text ----------------------------- */}
+                  <div className="row">
+                    <div className="col-25">
+                      <label htmlFor="lname">เบอร์ติดต่อ</label>
+                    </div>
+                    <div className="col-75">
+                      <input
+                        type="text"
+                        name="xxxx27"
+                        ref={register}
+                        placeholder=""
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Button ----------------------------- */}

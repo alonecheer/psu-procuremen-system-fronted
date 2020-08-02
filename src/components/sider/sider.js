@@ -12,7 +12,7 @@ import {
 const { Sider } = Layout;
 const SiderComponent = () => {
   const goPage_form002 = (e) => {
-    Router.push("/#002");
+    Router.push("/form002page/form002_1");
   };
   const goPage_form001 = (e) => {
     Router.push("/form001page/form001_1");
@@ -20,6 +20,7 @@ const SiderComponent = () => {
   const goPage_home = (e) => {
     Router.push("/homepage/home");
   };
+
   return (
     <Sider
       breakpoint="lg"

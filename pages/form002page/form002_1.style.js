@@ -67,7 +67,7 @@ const Form002_1StyleWrapper = styled.div`
   }
 
   .col-25 input[type="checkbox"] {
-    margin: 25px 0px;
+    margin: 15px 0px;
   }
 
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
