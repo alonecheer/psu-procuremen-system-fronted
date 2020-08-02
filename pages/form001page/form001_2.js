@@ -22,16 +22,18 @@ const form001_2 = () => {
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
   const onSubmit = (data) => {
     console.log("data", data);
+
+    /* Check Data Empty */
     let error = 0;
     for (const [key, value] of Object.entries(data)) {
       if (value != "") {
-        console.log(`Have value ${key}: ${value}`);
+        //console.log(`มีข้อมูล ${key}: ${value}`);
       } else {
         error = error + 1;
-        console.log(`Don't have value ${key}: ${value}`);
+        //console.log(`ไม่มีข้อมูล ${key}: ${value}`);
       }
     }
-    console.log(`${error}`);
+      // console.log(`${error}`);     /* Total Empty Data*/
     if (error > 0) {
       openNotificationWithIcon("warning");
     } else {
