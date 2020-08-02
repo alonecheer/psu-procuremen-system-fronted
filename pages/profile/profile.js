@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Descriptions } from "antd";
+import { Layout, Descriptions, Badge } from "antd";
 
 const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
@@ -19,31 +19,19 @@ const profile = () => {
               className="site-layout-background"
               style={{ padding: 24, minHeight: "100vh" }}
             >
-              <Descriptions
-                title="Responsive Descriptions"
-                bordered
-                column={{ xxl: 4, xl: 3, lg: 3, md: 3, sm: 2, xs: 1 }}
-              >
-                <Descriptions.Item label="Product">
-                  Cloud Database
+              <Descriptions title="ข้อมูลส่วนตัว" bordered>
+                <Descriptions.Item label="รหัสประจำตัว">
+                  6035512021
                 </Descriptions.Item>
-                <Descriptions.Item label="Billing">Prepaid</Descriptions.Item>
-                <Descriptions.Item label="time">18:00:00</Descriptions.Item>
-                <Descriptions.Item label="Amount">$80.00</Descriptions.Item>
-                <Descriptions.Item label="Discount">$20.00</Descriptions.Item>
-                <Descriptions.Item label="Official">$60.00</Descriptions.Item>
-                <Descriptions.Item label="Config Info">
-                  Data disk type: MongoDB
-                  <br />
-                  Database version: 3.4
-                  <br />
-                  Package: dds.mongo.mid
-                  <br />
-                  Storage space: 10 GB
-                  <br />
-                  Replication factor: 3
-                  <br />
-                  Region: East China 1
+                <Descriptions.Item label="ชื่อ">เจตนิพัทธ์</Descriptions.Item>
+                <Descriptions.Item label="สกุล">
+                  ตันเกียรติพงัน
+                </Descriptions.Item>
+                <Descriptions.Item label="รหัสบัตรประจำตัวประชาชน">
+                  1849901350698
+                </Descriptions.Item>
+                <Descriptions.Item label="Status">
+                  <Badge status="processing" text="Running" span={2} />
                 </Descriptions.Item>
               </Descriptions>
             </div>
