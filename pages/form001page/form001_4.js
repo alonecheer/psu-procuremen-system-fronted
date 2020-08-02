@@ -7,10 +7,10 @@ const { Dragger } = Upload;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
-import Form001_3StyleWrapper from "./form001_3.style";
+import Form001_4StyleWrapper from "./form001_4.style";
 const form001_3 = () => {
   const submit = async () => {
-    Router.push("/form001page/form001_4");
+    Router.push("/homepage/home");
   };
   const propsupload = {
     name: "file",
@@ -29,7 +29,7 @@ const form001_3 = () => {
     },
   };
   return (
-    <Form001_3StyleWrapper>
+    <Form001_4StyleWrapper>
       <title>Form001_3</title>
       <Layout>
         <SiderComponent />
@@ -41,7 +41,7 @@ const form001_3 = () => {
               style={{ padding: 24, minHeight: "100vh" }}
             >
               <Divider orientation="left">
-                <Tag color="orange">ไฟล์ภายในโครงการ</Tag>
+                <Tag color="purple">ใบเสนอราคา</Tag>
               </Divider>
 
               <Dragger {...propsupload}>
@@ -67,7 +67,7 @@ const form001_3 = () => {
           <FooterComponent />
         </Layout>
       </Layout>
-    </Form001_3StyleWrapper>
+    </Form001_4StyleWrapper>
   );
 };
 export default form001_3;
