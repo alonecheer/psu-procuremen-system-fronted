@@ -8,6 +8,7 @@ import HomeStyleWrapper from "./home.style";
 const home = () => {
   return (
     <HomeStyleWrapper>
+      <title>Homepage</title>
       <Layout>
         <SiderComponent />
         <Layout>
