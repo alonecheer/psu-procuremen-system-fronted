@@ -18,9 +18,6 @@ const style = {
   fontSize: 14,
 };
 const example = () => {
-  /* Checkbox */
-  const [checked, setChecked] = useState("true");
-  const [checked2, setChecked2] = useState("true");
   /* Form */
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
   const onSubmit = (data) => {
@@ -224,12 +221,7 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input
-                        type="checkbox"
-                        name="checkbox1"
-                        ref={register}
-                        onChange={() => setChecked(!checked)}
-                      />
+                      <input type="checkbox" name="checkbox1" ref={register} />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">
@@ -256,12 +248,7 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input
-                        type="checkbox"
-                        name="checkbox2"
-                        ref={register}
-                        onChange={() => setChecked2(!checked2)}
-                      />
+                      <input type="checkbox" name="checkbox2" ref={register} />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">
