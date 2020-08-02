@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ExampleStyleWrapper = styled.div`
+const ProfileStyleWrapper = styled.div`
   #components-layout-demo-responsive .logo {
     height: 32px;
     background: rgba(255, 255, 255, 0.2);
@@ -11,4 +11,4 @@ const ExampleStyleWrapper = styled.div`
     background: #fff;
   }
 `;
-export default ExampleStyleWrapper;
+export default ProfileStyleWrapper;
