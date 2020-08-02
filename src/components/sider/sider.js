@@ -11,6 +11,9 @@ import {
 } from "@ant-design/icons";
 const { Sider } = Layout;
 const SiderComponent = () => {
+  const goPage_history = (e) => {
+    Router.push("/history/history");
+  };
   const goPage_profile = (e) => {
     Router.push("/profile/profile");
   };
@@ -65,7 +68,9 @@ const SiderComponent = () => {
             </a>
           </Menu.Item>
           <Menu.Item key="5" icon={<OrderedListOutlined />}>
-            ประวัติทำรายการ
+            <a className="text-a" onClick={goPage_history}>
+              ประวัติทำรายการ
+            </a>
           </Menu.Item>
           <Menu.Item key="6" icon={<LoginOutlined />}>
             ออกจากระบบ
