@@ -19,18 +19,22 @@ const style = {
 };
 const form001_1 = () => {
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
+
+  // เมื่อกดปุ่ม Submit
   const onSubmit = (data) => {
     console.log("data", data);
     let error = 0;
+    // เช็คว่ามีข้อมูลใน Array หรือไม่
     for (const [key, value] of Object.entries(data)) {
       if (value != "") {
-        console.log(`Have value ${key}: ${value}`);
+        //console.log(`Have value ${key}: ${value}`);
       } else {
         error = error + 1;
-        console.log(`Don't have value ${key}: ${value}`);
+        //console.log(`Don't have value ${key}: ${value}`);
       }
     }
-    console.log(`${error}`);
+    // แสดงว่าข้อมูลว่างกี่ตัว
+    //console.log(`${error}`);
     if (error > 0) {
       openNotificationWithIcon("warning");
     } else {
@@ -106,6 +110,7 @@ const form001_1 = () => {
                         type="text"
                         name="o_location"
                         ref={register}
+                        placeholder="มหาวิทยาลัย"
                       ></input>
                     </div>
                   </div>
