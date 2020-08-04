@@ -1,4 +1,6 @@
 // import App from 'next/app'
+import React from "react";
+import App, { Container } from "next/app";
 import "antd/dist/antd.css";
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

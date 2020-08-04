@@ -1,10 +1,10 @@
-const intialState = {
+const initialState = {
   profile: [],
 };
 
-export const ProfileReducer = (state = intialState, action) => {
+export const ProfileReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "":
+    case "LOAD_PROFILE":
       return {
         ...state,
         profile: [...state.profile, action.playload],
