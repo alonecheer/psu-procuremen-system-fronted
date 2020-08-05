@@ -4,7 +4,6 @@ const initalState = {
   post: {},
   loading: false,
   error: null,
-  test: "dd",
 };
 export const postReducer = (state = initalState, action) => {
   switch (action.type) {

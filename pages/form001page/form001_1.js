@@ -6,6 +6,8 @@ const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
+import { useDispatch, useSelector } from "react-redux";
+import { savedata } from "../../store/actions/form001_1Action";
 import Form001_1StyleWrapper from "./form001_1.style";
 const style = {
   height: 40,
@@ -18,6 +20,9 @@ const style = {
   fontSize: 14,
 };
 const form001_1 = () => {
+  // เรียกใช้ dispatch
+  const dispatch = useDispatch();
+  const { form001_1 } = useSelector((state) => state.form001_1);
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
 
   // เมื่อกดปุ่ม Submit
@@ -39,6 +44,8 @@ const form001_1 = () => {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
+      dispatch(savedata(data));
+      console.log("Redux form001", form001_1);
     }
   };
   const openNotificationWithIcon = (type) => {

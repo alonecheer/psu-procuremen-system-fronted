@@ -10,13 +10,12 @@ import Example_reduxStyleWrapper from "./example-redux.style";
 const example = () => {
   const dispatch = useDispatch();
   const { posts } = useSelector((state) => state.post);
-  console.log("posts", posts);
   useEffect(() => {
     dispatch(fetchposts());
   }, []);
   return (
     <Example_reduxStyleWrapper>
-      <title>Example</title>
+      <title>Example Redux</title>
       <Layout>
         <SiderComponent />
         <Layout>
@@ -26,7 +25,6 @@ const example = () => {
               className="site-layout-background"
               style={{ padding: 24, minHeight: "100vh" }}
             >
-              ทดสอบๆ
               {posts.map((data, index) => {
                 return <h1 key={index}>{data}</h1>;
               })}
