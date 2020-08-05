@@ -1,16 +1,17 @@
 import * as types from "../type";
 const initalState = {
   posts: [],
-  post: [],
+  post: {},
   loading: false,
   error: null,
+  test: "dd",
 };
 export const postReducer = (state = initalState, action) => {
   switch (action.type) {
     case types.GET_POSTS:
       return {
         ...state,
-        post: action.payload,
+        posts: action.payload,
         loading: false,
         error: null,
       };
