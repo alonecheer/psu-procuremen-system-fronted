@@ -1,21 +1,21 @@
-import "antd/dist/antd.css";
-import App, { Container } from "next/app";
+// import App from 'next/app'
 import React from "react";
-import withRedux from "next-redux-wrapper";
-import { initializeStore } from "../src/redux/store";
-import { Provider } from "react-redux";
-
-class MyApp extends App {
-  render() {
-    const { Component, pageProps, store } = this.props;
-    return (
-      <Container>
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
-      </Container>
-    );
-  }
+import App, { Container } from "next/app";
+import "antd/dist/antd.css";
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
 
-export default withRedux(initializeStore)(MyApp);
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// MyApp.getInitialProps = async (appContext) => {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
+//
+//   return { ...appProps }
+// }
+
+export default MyApp;
