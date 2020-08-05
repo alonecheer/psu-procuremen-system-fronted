@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Layout } from "antd";
 const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
-import ExampleStyleWrapper from "./example.style";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchposts } from "../../store/actions/postAction";
+import Example_reduxStyleWrapper from "./example-redux.style";
 const example = () => {
+  const dispatch = useDispatch();
+  const { posts } = useSelector((state) => state.post);
+  console.log("posts", posts);
+  useEffect(() => {
+    dispatch(fetchposts());
+  }, []);
   return (
-    <ExampleStyleWrapper>
+    <Example_reduxStyleWrapper>
       <title>Example</title>
       <Layout>
         <SiderComponent />
@@ -17,12 +25,17 @@ const example = () => {
             <div
               className="site-layout-background"
               style={{ padding: 24, minHeight: "100vh" }}
-            ></div>
+            >
+              ทดสอบๆ
+              {posts.map((data, index) => {
+                return <h1 key={index}>{data}</h1>;
+              })}
+            </div>
           </Content>
           <FooterComponent />
         </Layout>
       </Layout>
-    </ExampleStyleWrapper>
+    </Example_reduxStyleWrapper>
   );
 };
 export default example;
