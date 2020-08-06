@@ -42,24 +42,17 @@ const form001_2 = () => {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
-      // Api Post
+      // Api Post บันทึกรายการ
       Axios.post(`http://localhost:3000/form001-2/insertform001-2`, data)
         .then((res) => {
           console.log("Success");
-          // Api Post
-          Axios.post(`http://localhost:3000/form001/insertform001`, data)
-            .then((res) => {
-              console.log("Success");
-            })
-            .catch((res) => {
-              console.log("False");
-            });
-          // เก็บข้อมูลลงใน Redux
-          dispatch(saveform001_2(data));
         })
         .catch((res) => {
           console.log("False");
         });
+      // เก็บข้อมูลลงใน Redux
+      dispatch(saveform001_2(data));
+      //dispatch({ type: "SAVE_FORM001_1", payload: data });
     }
   };
   // แจ้งเตือน

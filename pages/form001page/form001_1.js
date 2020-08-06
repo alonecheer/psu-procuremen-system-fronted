@@ -47,7 +47,7 @@ const form001_1 = () => {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
-      // Api Post
+      // Api Post บันทึกรายการ
       Axios.post(`http://localhost:3000/form001/insertform001`, data)
         .then((res) => {
           console.log("Success");
