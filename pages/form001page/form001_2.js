@@ -52,7 +52,6 @@ const form001_2 = () => {
         });
       // เก็บข้อมูลลงใน Redux
       dispatch(saveform001_2(data));
-      //dispatch({ type: "SAVE_FORM001_1", payload: data });
     }
   };
   // แจ้งเตือน
@@ -133,7 +132,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_amount_1"
                         ></input>
                       </td>
@@ -147,7 +146,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_priceunit_1"
                         ></input>
                       </td>
@@ -164,7 +163,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_amount_2"
                         ></input>
                       </td>
@@ -178,7 +177,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_priceunit_2"
                         ></input>
                       </td>
@@ -195,7 +194,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_amount_3"
                         ></input>
                       </td>
@@ -209,7 +208,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_priceunit_3"
                         ></input>
                       </td>
@@ -226,7 +225,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_amount_4"
                         ></input>
                       </td>
@@ -240,7 +239,7 @@ const form001_2 = () => {
                       <td>
                         <input
                           ref={register}
-                          type="text"
+                          type="number"
                           name="l_priceunit_4"
                         ></input>
                       </td>
