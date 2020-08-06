@@ -1,7 +1,7 @@
 import * as types from "./type";
 import Axios from "axios";
 
-export const savedata = (data) => async (dispatch) => {
+export const saveform001_1 = (data) => async (dispatch) => {
   //console.log(data);
   dispatch({
     type: types.SAVE_FORM001_1,

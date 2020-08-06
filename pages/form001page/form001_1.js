@@ -7,7 +7,7 @@ import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import { useDispatch, useSelector } from "react-redux";
-import { savedata } from "../../store/form001_1/form001_1Action";
+import { saveform001_1 } from "../../store/form001_1/form001_1Action";
 import Form001_1StyleWrapper from "./form001_1.style";
 import Axios from "axios";
 const style = {
@@ -56,7 +56,7 @@ const form001_1 = () => {
           console.log("False");
         });
       // เก็บข้อมูลลงใน Redux
-      dispatch(savedata(data));
+      dispatch(saveform001_1(data));
       //dispatch({ type: "SAVE_FORM001_1", payload: data });
     }
   };

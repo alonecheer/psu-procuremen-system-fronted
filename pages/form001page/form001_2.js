@@ -8,6 +8,7 @@ import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import { useDispatch, useSelector } from "react-redux";
 import { getdata } from "../../store/form001_1/form001_1Action";
+import { saveform001_2 } from "../../store/form001_2/form001_2Action";
 import Form001_2StyleWrapper from "./form001_2.style";
 import Axios from "axios";
 const style = {
@@ -45,6 +46,16 @@ const form001_2 = () => {
       Axios.post(`http://localhost:3000/form001-2/insertform001-2`, data)
         .then((res) => {
           console.log("Success");
+          // Api Post
+          Axios.post(`http://localhost:3000/form001/insertform001`, data)
+            .then((res) => {
+              console.log("Success");
+            })
+            .catch((res) => {
+              console.log("False");
+            });
+          // เก็บข้อมูลลงใน Redux
+          dispatch(saveform001_2(data));
         })
         .catch((res) => {
           console.log("False");
