@@ -10,6 +10,7 @@ import Example_reduxStyleWrapper from "./example-redux.style";
 const example = () => {
   const dispatch = useDispatch();
   const { posts } = useSelector((state) => state.post);
+  console.log(posts);
   useEffect(() => {
     dispatch(fetchposts());
   }, []);

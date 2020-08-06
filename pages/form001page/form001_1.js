@@ -22,7 +22,7 @@ const style = {
 const form001_1 = () => {
   // เรียกใช้ dispatch
   const dispatch = useDispatch();
-  const { form001_1 } = useSelector((state) => state.form001_1);
+  const { form001_1 } = useSelector((state) => state.form001_1.info_form001_1);
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
 
   // เมื่อกดปุ่ม Submit
@@ -44,8 +44,8 @@ const form001_1 = () => {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
-      dispatch(savedata(data));
-      console.log("Redux form001", form001_1);
+      // เก็บข้อมูลลงใน Redux
+      //dispatch({ type: "SAVE_FORM001_1", payload: data });
     }
   };
   const openNotificationWithIcon = (type) => {

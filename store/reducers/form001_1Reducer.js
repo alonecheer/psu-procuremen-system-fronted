@@ -1,7 +1,7 @@
 import * as types from "../type";
 
 const initalState = {
-  info_form001_1: {},
+  info_form001_1: [],
 };
 
 export const form001_1Reducer = (state = initalState, action) => {
