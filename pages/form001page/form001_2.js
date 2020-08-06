@@ -74,6 +74,12 @@ const form001_2 = () => {
   const dispatch = useDispatch();
   // เรียกใช้ค่าจากใน Store
   const username = useSelector((state) => state.user.user.username);
+
+  // ดึงเลข order_id จาก store ที่ได้จาก getdata()
+  const order_id = useSelector(
+    (state) => state.form001_1.info_form001_1.order_id
+  );
+
   useEffect(() => {
     // Get Api หาเลขใบรายการล่าสุด
     dispatch(getdata(username));
@@ -92,6 +98,14 @@ const form001_2 = () => {
               style={{ padding: 24, minHeight: "100vh" }}
             >
               <form onSubmit={handleSubmit(onSubmit)}>
+                {/* ------------- ส่ง order_id บันทึกรายการ ------------- */}
+                <input
+                  type="number"
+                  name="order_id"
+                  hidden={true}
+                  defaultValue={order_id}
+                  ref={register}
+                />
                 <table>
                   <thead>
                     <tr>
