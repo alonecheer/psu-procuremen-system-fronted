@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Router from "next/router";
 import { useForm } from "react-hook-form";
 import { Layout, BackTop, notification, Button, Table } from "antd";
@@ -6,6 +6,8 @@ const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
+import { useDispatch, useSelector } from "react-redux";
+import { getdata } from "../../store/form001_1/form001_1Action";
 import Form001_2StyleWrapper from "./form001_2.style";
 import Axios from "axios";
 const style = {
@@ -67,6 +69,16 @@ const form001_2 = () => {
         break;
     }
   };
+
+  // เรียกใช้ dispatch
+  const dispatch = useDispatch();
+  // เรียกใช้ค่าจากใน Store
+  const username = useSelector((state) => state.user.user.username);
+  useEffect(() => {
+    // Get Api หาเลขใบรายการล่าสุด
+    dispatch(getdata(username));
+  }, []);
+
   return (
     <Form001_2StyleWrapper>
       <title>Form001_2</title>

@@ -11,6 +11,11 @@ export const form001_1Reducer = (state = initalState, action) => {
         ...state,
         info_form001_1: action.payload,
       };
+    case types.GET_FORM001_1:
+      return {
+        ...state,
+        info_form001_1: action.payload,
+      }
     default:
       return state;
   }
