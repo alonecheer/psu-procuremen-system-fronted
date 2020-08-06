@@ -7,6 +7,7 @@ import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import Form001_2StyleWrapper from "./form001_2.style";
+import Axios from "axios";
 const style = {
   height: 40,
   width: 40,
@@ -38,8 +39,17 @@ const form001_2 = () => {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
+      // Api Post
+      Axios.post(`http://localhost:3000/form001-2/insertform001-2`, data)
+        .then((res) => {
+          console.log("Success");
+        })
+        .catch((res) => {
+          console.log("False");
+        });
     }
   };
+  // แจ้งเตือน
   const openNotificationWithIcon = (type) => {
     switch (type) {
       case "warning":

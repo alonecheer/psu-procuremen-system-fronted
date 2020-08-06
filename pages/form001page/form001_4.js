@@ -40,7 +40,7 @@ const form001_3 = () => {
               className="site-layout-background"
               style={{ padding: 24, minHeight: "100vh" }}
             >
-              <Divider orientation="left">
+              <Divider orientation="left" style={{ marginBottom: "50px" }}>
                 <Tag color="purple">ใบเสนอราคา</Tag>
               </Divider>
 

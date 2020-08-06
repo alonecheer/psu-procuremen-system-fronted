@@ -13,9 +13,9 @@ const form001_3 = () => {
     Router.push("/form001page/form001_4");
   };
   const propsupload = {
-    name: "file",
+    name: "image",
     multiple: false,
-    action: "",
+    action: "http://localhost:3000/uploadfile001/single",
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
@@ -40,8 +40,8 @@ const form001_3 = () => {
               className="site-layout-background"
               style={{ padding: 24, minHeight: "100vh" }}
             >
-              <Divider orientation="left">
-                <Tag color="orange">ไฟล์ภายในโครงการ</Tag>
+              <Divider orientation="left" style={{ marginBottom: "50px" }}>
+                <Tag color="orange" >ไฟล์ภายในโครงการ</Tag>
               </Divider>
 
               <Dragger {...propsupload}>
