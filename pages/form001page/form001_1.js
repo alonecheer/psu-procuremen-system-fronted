@@ -9,6 +9,7 @@ import FooterComponent from "../../src/components/footer/footer.js";
 import { useDispatch, useSelector } from "react-redux";
 import { savedata } from "../../store/actions/form001_1Action";
 import Form001_1StyleWrapper from "./form001_1.style";
+import Axios from "axios";
 const style = {
   height: 40,
   width: 40,
@@ -22,7 +23,7 @@ const style = {
 const form001_1 = () => {
   // เรียกใช้ dispatch
   const dispatch = useDispatch();
-  const { form001_1 } = useSelector((state) => state.form001_1.info_form001_1);
+  const form001_1 = useSelector((state) => state.form001_1.info_form001_1);
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
 
   // เมื่อกดปุ่ม Submit
@@ -44,10 +45,19 @@ const form001_1 = () => {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
+      // Api Post 
+      Axios.post(`http://localhost:3000/form001/insertform001`, data)
+        .then((res) => {
+          console.log("Success");
+        })
+        .catch((res) => {
+          console.log("False");
+        });
       // เก็บข้อมูลลงใน Redux
-      //dispatch({ type: "SAVE_FORM001_1", payload: data });
+      dispatch({ type: "SAVE_FORM001_1", payload: data });
     }
   };
+  // แจ้งเตือน
   const openNotificationWithIcon = (type) => {
     switch (type) {
       case "warning":

@@ -33,7 +33,7 @@ const form001_2 = () => {
         //console.log(`ไม่มีข้อมูล ${key}: ${value}`);
       }
     }
-      // console.log(`${error}`);     /* Total Empty Data*/
+    // console.log(`${error}`);     /* Total Empty Data*/
     if (error > 0) {
       openNotificationWithIcon("warning");
     } else {
