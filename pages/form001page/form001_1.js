@@ -23,10 +23,10 @@ const style = {
 const form001_1 = () => {
   // เรียกใช้ dispatch
   const dispatch = useDispatch();
-  const form001_1 = useSelector((state) => state.form001_1.info_form001_1);
-  
+  // เรียกใช้ค่าจากใน Store
+  const username = useSelector((state) => state.user.user.username);
   // initialise the hook
-  const { register, handleSubmit, errors } = useForm(); 
+  const { register, handleSubmit, errors } = useForm();
 
   // เมื่อกดปุ่ม Submit
   const onSubmit = (data) => {
@@ -47,7 +47,7 @@ const form001_1 = () => {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
-      // Api Post 
+      // Api Post
       Axios.post(`http://localhost:3000/form001/insertform001`, data)
         .then((res) => {
           console.log("Success");
@@ -115,7 +115,9 @@ const form001_1 = () => {
                         type="text"
                         name="sid"
                         ref={register}
-                        placeholder="60xxxxxxx"
+                        defaultValue={username}
+                        disabled={true}
+                        //placeholder={user.username}
                       ></input>
                     </div>
                   </div>
