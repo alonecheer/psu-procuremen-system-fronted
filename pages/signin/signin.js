@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchuser } from "../../store/actions/get_userAction";
 import SigninStyleWrapper from "./signin.style";
 const signin = () => {
+  // เรียกใช้ dispatch
+  const dispatch = useDispatch();
+
+  // Set user & pass
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  // Sign in api
   const signin = async () => {
     const Signin = await axios
       .post(`http://localhost:3000/auth/login`, {
@@ -13,6 +21,7 @@ const signin = () => {
       })
       .then((Signin) => {
         sessionStorage.setItem("access_token", Signin.data.access_token);
+        dispatch(fetchuser(username));
         Router.push("/homepage/home");
       })
       .catch((Signin) => {

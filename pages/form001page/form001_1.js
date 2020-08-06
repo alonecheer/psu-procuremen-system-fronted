@@ -24,7 +24,9 @@ const form001_1 = () => {
   // เรียกใช้ dispatch
   const dispatch = useDispatch();
   const form001_1 = useSelector((state) => state.form001_1.info_form001_1);
-  const { register, handleSubmit, errors } = useForm(); // initialise the hook
+  
+  // initialise the hook
+  const { register, handleSubmit, errors } = useForm(); 
 
   // เมื่อกดปุ่ม Submit
   const onSubmit = (data) => {

@@ -13,9 +13,9 @@ const form001_3 = () => {
     Router.push("/homepage/home");
   };
   const propsupload = {
-    name: "file",
+    name: "image",
     multiple: false,
-    action: "",
+    action: "http://localhost:3000/uploadfile001/single",
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
