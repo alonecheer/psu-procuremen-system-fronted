@@ -1,4 +1,4 @@
-import * as types from "../type";
+import * as types from "./type";
 
 export const savedata = (data) => async (dispatch) => {
   //console.log(data);

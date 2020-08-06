@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchuser } from "../../store/actions/get_userAction";
+import { fetchuser } from "../../store/user/get_userAction";
 import SigninStyleWrapper from "./signin.style";
 const signin = () => {
   // เรียกใช้ dispatch

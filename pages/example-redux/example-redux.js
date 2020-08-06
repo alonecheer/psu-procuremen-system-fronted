@@ -5,7 +5,7 @@ import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchposts } from "../../store/actions/postAction";
+import { fetchposts } from "../../store/example/postAction";
 import Example_reduxStyleWrapper from "./example-redux.style";
 const example = () => {
   const dispatch = useDispatch();

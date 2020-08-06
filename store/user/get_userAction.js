@@ -1,4 +1,4 @@
-import * as types from "../type";
+import * as types from "./type";
 import Axios from "axios";
 
 export const fetchuser = (username) => async (dispatch) => {

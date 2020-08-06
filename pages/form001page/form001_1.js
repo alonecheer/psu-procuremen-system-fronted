@@ -7,7 +7,7 @@ import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import { useDispatch, useSelector } from "react-redux";
-import { savedata } from "../../store/actions/form001_1Action";
+import { savedata } from "../../store/form001_1/form001_1Action";
 import Form001_1StyleWrapper from "./form001_1.style";
 import Axios from "axios";
 const style = {
@@ -109,7 +109,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">เอกสารของ</label>
+                      <label>เอกสารของ</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -125,7 +125,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">เอกสารที่ มอ.696/</label>
+                      <label>เอกสารที่ มอ.696/</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -139,7 +139,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">ลงวันที่</label>
+                      <label>ลงวันที่</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -153,7 +153,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
+                      <label>
                         ด้วยมหาวิทยาลัยการคอมพิวเตอร์มีความประสงค์ที่จะใช้พัสดุด้านล่างนี้เพื่อ
                       </label>
                     </div>
@@ -169,7 +169,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">ชื่อโครงการ (ถ้ามี)</label>
+                      <label>ชื่อโครงการ (ถ้ามี)</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -183,7 +183,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">วันที่ต้องใช้พัสดุ</label>
+                      <label>วันที่ต้องใช้พัสดุ</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -208,7 +208,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
+                      <label>
                         รายละเอียดคุณลักษณะเฉพาะ/ขอบเขตงาน
                         (ประทับตรามหาวิทยาลัยพร้อมผู้มีอำนาจลงนาม) (จำนวนแผ่น)
                       </label>
@@ -225,7 +225,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
+                      <label>
                         บันทึกการแต่งตั้งคณะกรรมการกำหนดคุณลักษณะเฉพาะ/ขอบเขตงานและราคากลาง
                         (จำนวนแผ่น)
                       </label>
@@ -242,7 +242,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
+                      <label>
                         บันทึกรายงานผลการจัดทำคุณลักษณะเฉพาะ/ขอบเขตงานและราคากลาง
                         (จำนวนแผ่น)
                       </label>
@@ -268,9 +268,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
-                        คณะกรรมการพิจารณาผล (ประธานกรรมการ)
-                      </label>
+                      <label>คณะกรรมการพิจารณาผล (ประธานกรรมการ)</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -284,9 +282,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
-                        คณะกรรมการพิจารณาผล (คณะกรรมการ)
-                      </label>
+                      <label>คณะกรรมการพิจารณาผล (คณะกรรมการ)</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -300,9 +296,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
-                        คณะกรรมการพิจารณาผล (คณะกรรมการ)
-                      </label>
+                      <label>คณะกรรมการพิจารณาผล (คณะกรรมการ)</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -316,9 +310,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
-                        คณะกรรมการตรวจรับพัสดุ (ประธานกรรมการ)
-                      </label>
+                      <label>คณะกรรมการตรวจรับพัสดุ (ประธานกรรมการ)</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -332,9 +324,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
-                        คณะกรรมการตรวจรับพัสดุ (คณะกรรมการ)
-                      </label>
+                      <label>คณะกรรมการตรวจรับพัสดุ (คณะกรรมการ)</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -348,9 +338,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
-                        คณะกรรมการตรวจรับพัสดุ (คณะกรรมการ)
-                      </label>
+                      <label>คณะกรรมการตรวจรับพัสดุ (คณะกรรมการ)</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -373,11 +361,11 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">เงินอุดหนุนจากรัฐบาล ปี</label>
+                      <label>เงินอุดหนุนจากรัฐบาล ปี</label>
                     </div>
                     <div className="col-75">
                       <input
-                        type="text"
+                        type="number"
                         name="o_gvm_sub"
                         placeholder=""
                         ref={register}
@@ -387,11 +375,11 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">เงินรายได้ ปี</label>
+                      <label>เงินรายได้ ปี</label>
                     </div>
                     <div className="col-75">
                       <input
-                        type="text"
+                        type="number"
                         name="o_income"
                         placeholder=""
                         ref={register}
@@ -401,11 +389,11 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">เงินรายได้สะสม ปี</label>
+                      <label>เงินรายได้สะสม ปี</label>
                     </div>
                     <div className="col-75">
                       <input
-                        type="text"
+                        type="number"
                         name="o_aml_income"
                         placeholder=""
                         ref={register}
@@ -415,7 +403,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">ทิศทาง</label>
+                      <label>ทิศทาง</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -429,7 +417,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">นโยบาย</label>
+                      <label>นโยบาย</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -443,7 +431,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">ผลงาน</label>
+                      <label>ผลงาน</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -457,7 +445,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">งาน</label>
+                      <label>งาน</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -471,7 +459,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">หมวดรายจ่าย</label>
+                      <label>หมวดรายจ่าย</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -485,7 +473,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">หมวดย่อย</label>
+                      <label>หมวดย่อย</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -499,7 +487,7 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">ชื่อรายการ</label>
+                      <label>ชื่อรายการ</label>
                     </div>
                     <div className="col-75">
                       <input
@@ -513,13 +501,11 @@ const form001_1 = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <label htmlFor="lname">
-                        เงินอื่นๆโปรดระบุ (ตามที่แนบมาพร้อมนี้)
-                      </label>
+                      <label>เงินอื่นๆโปรดระบุ (ตามที่แนบมาพร้อมนี้)</label>
                     </div>
                     <div className="col-75">
                       <input
-                        type="text"
+                        type="number"
                         name="o_other_m"
                         placeholder=""
                         ref={register}
