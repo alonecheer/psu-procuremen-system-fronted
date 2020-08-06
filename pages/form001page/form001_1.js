@@ -56,7 +56,8 @@ const form001_1 = () => {
           console.log("False");
         });
       // เก็บข้อมูลลงใน Redux
-      dispatch({ type: "SAVE_FORM001_1", payload: data });
+      dispatch(savedata(data));
+      //dispatch({ type: "SAVE_FORM001_1", payload: data });
     }
   };
   // แจ้งเตือน
