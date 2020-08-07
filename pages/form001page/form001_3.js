@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Router from "next/router";
 import { Layout, Upload, message, Tag, Divider } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
@@ -11,10 +11,28 @@ import { useDispatch, useSelector } from "react-redux";
 import { getdata } from "../../store/form001_1/form001_1Action";
 import axios from "axios";
 import Form001_3StyleWrapper from "./form001_3.style";
+import { formatCountdown } from "antd/lib/statistic/utils";
 const form001_3 = () => {
+  // เรียกใช้ dispatch
+  const dispatch = useDispatch();
+  // เรียกใช้ค่าจากใน Store
+  const username = useSelector((state) => state.user.user.username);
+
+  //ดึงเลข order_id จาก store ที่ได้จาก getdata()
+  const order_id = useSelector(
+    (state) => state.form001_1.info_form001_1.order_id
+  );
+  console.log("Before props", order_id);
+
+  useEffect(() => {
+    // Get Api หาเลขใบรายการล่าสุด
+    dispatch(getdata(username));
+  }, []);
+  // Submit buttom
   const submit = async () => {
     Router.push("/form001page/form001_4");
   };
+  // Upload file
   const propsupload = {
     name: "image",
     action: `http://localhost:3000/uploadfile001/single/${order_id}`,
@@ -31,21 +49,7 @@ const form001_3 = () => {
       }
     },
   };
-  // เรียกใช้ dispatch
-  const dispatch = useDispatch();
-  // เรียกใช้ค่าจากใน Store
-  const username = useSelector((state) => state.user.user.username);
 
-  // ดึงเลข order_id จาก store ที่ได้จาก getdata()
-  const order_id = useSelector(
-    (state) => state.form001_1.info_form001_1.order_id
-  );
-  console.log("Before props", order_id);
-
-  useEffect(() => {
-    // Get Api หาเลขใบรายการล่าสุด
-    dispatch(getdata(username));
-  }, []);
   return (
     <Form001_3StyleWrapper>
       <title>Form001_3</title>
@@ -61,7 +65,6 @@ const form001_3 = () => {
               <Divider orientation="left" style={{ marginBottom: "50px" }}>
                 <Tag color="orange">ไฟล์ภายในโครงการ</Tag>
               </Divider>
-
               <Dragger {...propsupload}>
                 <p className="ant-upload-drag-icon">
                   <InboxOutlined />
