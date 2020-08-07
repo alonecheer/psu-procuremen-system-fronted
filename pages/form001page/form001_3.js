@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Router from "next/router";
 import { Layout, Upload, message, Tag, Divider } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
@@ -7,6 +7,9 @@ const { Dragger } = Upload;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
+import { useDispatch, useSelector } from "react-redux";
+import { getdata } from "../../store/form001_1/form001_1Action";
+import axios from "axios";
 import Form001_3StyleWrapper from "./form001_3.style";
 const form001_3 = () => {
   const submit = async () => {
@@ -14,8 +17,8 @@ const form001_3 = () => {
   };
   const propsupload = {
     name: "image",
+    action: `http://localhost:3000/uploadfile001/single/${order_id}`,
     multiple: false,
-    action: "http://localhost:3000/uploadfile001/single",
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
@@ -28,6 +31,21 @@ const form001_3 = () => {
       }
     },
   };
+  // เรียกใช้ dispatch
+  const dispatch = useDispatch();
+  // เรียกใช้ค่าจากใน Store
+  const username = useSelector((state) => state.user.user.username);
+
+  // ดึงเลข order_id จาก store ที่ได้จาก getdata()
+  const order_id = useSelector(
+    (state) => state.form001_1.info_form001_1.order_id
+  );
+  console.log("Before props", order_id);
+
+  useEffect(() => {
+    // Get Api หาเลขใบรายการล่าสุด
+    dispatch(getdata(username));
+  }, []);
   return (
     <Form001_3StyleWrapper>
       <title>Form001_3</title>
@@ -41,7 +59,7 @@ const form001_3 = () => {
               style={{ padding: 24, minHeight: "100vh" }}
             >
               <Divider orientation="left" style={{ marginBottom: "50px" }}>
-                <Tag color="orange" >ไฟล์ภายในโครงการ</Tag>
+                <Tag color="orange">ไฟล์ภายในโครงการ</Tag>
               </Divider>
 
               <Dragger {...propsupload}>
