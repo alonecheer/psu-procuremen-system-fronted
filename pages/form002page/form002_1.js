@@ -24,24 +24,39 @@ const example = () => {
   const dispatch = useDispatch();
   // เรียกใช้ค่าจากใน Store
   const username = useSelector((state) => state.user.user.username);
-  /* Form */
-  const { register, handleSubmit, errors } = useForm(); // initialise the hook
+  // initialise the hook
+  const { register, handleSubmit, errors } = useForm();
+
+  // เมื่อกดปุ่ม Submit
   const onSubmit = (data) => {
     console.log("data", data);
     let error = 0;
+    // เช็คว่ามีข้อมูลใน Array หรือไม่
     for (const [key, value] of Object.entries(data)) {
-      if (value != "" || value === false) {
-        console.log(`Have value ${key}: ${value}`);
+      if (value != "") {
+        //console.log(`Have value ${key}: ${value}`);
       } else {
         error = error + 1;
-        console.log(`Don't have value ${key}: ${value}`);
+        //console.log(`Don't have value ${key}: ${value}`);
       }
     }
-    console.log(`${error}`);
+    // แสดงว่าข้อมูลว่างกี่ตัว
+    //console.log(`${error}`);
     if (error > 0) {
       openNotificationWithIcon("warning");
     } else {
       openNotificationWithIcon("success");
+      // Api Post บันทึกรายการ
+      Axios.post(`http://localhost:3000/form001/insertform001`, data)
+        .then((res) => {
+          console.log("Success");
+        })
+        .catch((res) => {
+          console.log("False");
+        });
+      // เก็บข้อมูลลงใน Redux
+      //dispatch(saveform001_1(data));
+      //dispatch({ type: "SAVE_FORM001_1", payload: data });
     }
   };
   const openNotificationWithIcon = (type) => {
