@@ -7,6 +7,7 @@ import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import { useDispatch, useSelector } from "react-redux";
+import { saveform002 } from "../../store/form002/form002Action";
 import Form002_1StyleWrapper from "./form002_1.style";
 import Axios from "axios";
 const style = {
@@ -33,7 +34,7 @@ const example = () => {
     let error = 0;
     // เช็คว่ามีข้อมูลใน Array หรือไม่
     for (const [key, value] of Object.entries(data)) {
-      if (value != "") {
+      if (value != "" || value === false) {
         //console.log(`Have value ${key}: ${value}`);
       } else {
         error = error + 1;
@@ -47,7 +48,7 @@ const example = () => {
     } else {
       openNotificationWithIcon("success");
       // Api Post บันทึกรายการ
-      Axios.post(`http://localhost:3000/form001/insertform001`, data)
+      Axios.post(`http://localhost:3000/form002/insertform002`, data)
         .then((res) => {
           console.log("Success");
         })
@@ -55,10 +56,10 @@ const example = () => {
           console.log("False");
         });
       // เก็บข้อมูลลงใน Redux
-      //dispatch(saveform001_1(data));
-      //dispatch({ type: "SAVE_FORM001_1", payload: data });
+      dispatch(saveform002(data));
     }
   };
+
   const openNotificationWithIcon = (type) => {
     switch (type) {
       case "warning":
@@ -248,7 +249,11 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input type="checkbox" name="o2_checkbox1" ref={register} />
+                      <input
+                        type="checkbox"
+                        name="o2_checkbox1"
+                        ref={register}
+                      />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">
@@ -275,7 +280,11 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input type="checkbox" name="o2_checkbox2" ref={register} />
+                      <input
+                        type="checkbox"
+                        name="o2_checkbox2"
+                        ref={register}
+                      />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">

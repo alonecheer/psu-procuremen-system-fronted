@@ -4,7 +4,7 @@ const initalState = {
   info_form002: [],
 };
 
-export const form001_1Reducer = (state = initalState, action) => {
+export const form002Reducer = (state = initalState, action) => {
   switch (action.type) {
     case types.SAVE_FORM002:
       return {
