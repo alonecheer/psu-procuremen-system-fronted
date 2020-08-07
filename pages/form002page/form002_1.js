@@ -6,7 +6,9 @@ const { Content } = Layout;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
+import { useDispatch, useSelector } from "react-redux";
 import Form002_1StyleWrapper from "./form002_1.style";
+import Axios from "axios";
 const style = {
   height: 40,
   width: 40,
@@ -18,6 +20,10 @@ const style = {
   fontSize: 14,
 };
 const example = () => {
+  // เรียกใช้ dispatch
+  const dispatch = useDispatch();
+  // เรียกใช้ค่าจากใน Store
+  const username = useSelector((state) => state.user.user.username);
   /* Form */
   const { register, handleSubmit, errors } = useForm(); // initialise the hook
   const onSubmit = (data) => {
@@ -76,7 +82,13 @@ const example = () => {
                       <label className="title-text">บันทึกข้อความ</label>
                     </div>
                     <div className="col-75">
-                      <input type="hidden"></input>
+                      <input
+                        type="hidden"
+                        name="sid"
+                        ref={register}
+                        defaultValue={username}
+                        disabled={true}
+                      ></input>
                     </div>
                   </div>
                   {/* ----------------------------------- Text ----------------------------- */}
@@ -87,7 +99,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx1"
+                        name="o2_division"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -101,7 +113,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx2"
+                        name="o2_location"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -115,7 +127,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx3"
+                        name="o2_date"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -129,7 +141,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx4"
+                        name="o2_title"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -143,7 +155,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx5"
+                        name="o2_offer"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -157,7 +169,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx5"
+                        name="o2_agency"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -171,7 +183,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx7"
+                        name="o2_affiliate"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -198,7 +210,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx8"
+                        name="o2_amount"
                         ref={register}
                         placeholder="(รายการ)"
                       ></input>
@@ -212,7 +224,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx9"
+                        name="o2_limit"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -221,7 +233,7 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input type="checkbox" name="checkbox1" ref={register} />
+                      <input type="checkbox" name="o2_checkbox1" ref={register} />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">
@@ -239,7 +251,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx10"
+                        name="o2_order"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -248,7 +260,7 @@ const example = () => {
                   {/* ----------------------------------- Text ----------------------------- */}
                   <div className="row">
                     <div className="col-25">
-                      <input type="checkbox" name="checkbox2" ref={register} />
+                      <input type="checkbox" name="o2_checkbox2" ref={register} />
                     </div>
                     <div className="col-75">
                       <label htmlFor="lname">
@@ -267,7 +279,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx11"
+                        name="o2_since"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -290,7 +302,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx11"
+                        name="o2_pay1"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -304,7 +316,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx13"
+                        name="o2_pay1_mn1"
                         ref={register}
                         placeholder="(บาท)"
                       ></input>
@@ -318,7 +330,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx14"
+                        name="o2_pay2"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -332,7 +344,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx15"
+                        name="o2_pay2_mn2"
                         ref={register}
                         placeholder="(บาท)"
                       ></input>
@@ -346,7 +358,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx16"
+                        name="o2_pay3"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -360,7 +372,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx17"
+                        name="o2_pay3_mn3"
                         ref={register}
                         placeholder="(บาท)"
                       ></input>
@@ -374,7 +386,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx18"
+                        name="o2_source"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -388,7 +400,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx19"
+                        name="o2_plan"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -402,7 +414,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx20"
+                        name="o2_product"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -416,7 +428,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx21"
+                        name="o2_cg"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -451,7 +463,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx22"
+                        name="o2_pd_check"
                         ref={register}
                         placeholder="(ประธานกรรมการ/ผู้ตรวจรับพัสดุ)"
                       ></input>
@@ -465,7 +477,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx23"
+                        name="o2_committee1"
                         ref={register}
                         placeholder="(กรรมการ)"
                       ></input>
@@ -479,7 +491,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx24"
+                        name="o2_committee2"
                         ref={register}
                         placeholder="(กรรมการ)"
                       ></input>
@@ -503,7 +515,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx25"
+                        name="o2_sign"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -517,7 +529,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx26"
+                        name="o2_ac"
                         ref={register}
                         placeholder=""
                       ></input>
@@ -531,7 +543,7 @@ const example = () => {
                     <div className="col-75">
                       <input
                         type="text"
-                        name="xxxx27"
+                        name="o2_tel"
                         ref={register}
                         placeholder=""
                       ></input>

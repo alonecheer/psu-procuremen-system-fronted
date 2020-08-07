@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import Router from "next/router";
 import { Layout, Upload, message, Tag, Divider } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
@@ -7,15 +7,33 @@ const { Dragger } = Upload;
 import SiderComponent from "../../src/components/sider/sider.js";
 import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
+import { useDispatch, useSelector } from "react-redux";
+import { getdata } from "../../store/form001_1/form001_1Action";
 import Form001_4StyleWrapper from "./form001_4.style";
 const form001_3 = () => {
+  // เรียกใช้ dispatch
+  const dispatch = useDispatch();
+  // เรียกใช้ค่าจากใน Store
+  const username = useSelector((state) => state.user.user.username);
+
+  //ดึงเลข order_id จาก store ที่ได้จาก getdata()
+  const order_id = useSelector(
+    (state) => state.form001_1.info_form001_1.order_id
+  );
+
+  useEffect(() => {
+    // Get Api หาเลขใบรายการล่าสุด
+    dispatch(getdata(username));
+  }, []);
+  // Submit buttom
   const submit = async () => {
     Router.push("/homepage/home");
   };
+  // Upload file
   const propsupload = {
     name: "image",
+    action: `http://localhost:3000/uploadfile001/single/${order_id}`,
     multiple: false,
-    action: "http://localhost:3000/uploadfile001/single",
     onChange(info) {
       const { status } = info.file;
       if (status !== "uploading") {
@@ -28,6 +46,7 @@ const form001_3 = () => {
       }
     },
   };
+
   return (
     <Form001_4StyleWrapper>
       <title>Form001_3</title>

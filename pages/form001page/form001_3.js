@@ -9,9 +9,7 @@ import HeaderComponent from "../../src/components/header/header.js";
 import FooterComponent from "../../src/components/footer/footer.js";
 import { useDispatch, useSelector } from "react-redux";
 import { getdata } from "../../store/form001_1/form001_1Action";
-import axios from "axios";
 import Form001_3StyleWrapper from "./form001_3.style";
-import { formatCountdown } from "antd/lib/statistic/utils";
 const form001_3 = () => {
   // เรียกใช้ dispatch
   const dispatch = useDispatch();
@@ -22,7 +20,7 @@ const form001_3 = () => {
   const order_id = useSelector(
     (state) => state.form001_1.info_form001_1.order_id
   );
-  console.log("Before props", order_id);
+
 
   useEffect(() => {
     // Get Api หาเลขใบรายการล่าสุด
