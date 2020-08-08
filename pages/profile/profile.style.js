@@ -10,5 +10,11 @@ const ProfileStyleWrapper = styled.div`
   .site-layout-background {
     background: #fff;
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 export default ProfileStyleWrapper;
